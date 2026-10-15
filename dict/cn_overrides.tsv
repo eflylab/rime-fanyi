@@ -1,0 +1,173 @@
+# fanyi 高频词覆盖表（优先级高于主词典）
+# 用途：CC-CEDICT 对部分词条的释义顺序不符合口语常用义（如"开发"首义是
+#       "to exploit"），此表把常用义放前面覆盖。
+# 格式：中文<TAB>译词（多义用 ' / ' 分隔）
+# 说明：这里只需填写需要修正的词；其余词仍走主词典 cn2en.tsv。
+
+# ---------- 技术/工作高频词 ----------
+开发	develop / development
+程序	program / procedure / order
+项目	project / item
+管理	manage / management
+市场	market / marketplace
+服务	service / serve
+报告	report / to report
+结果	result / outcome
+计划	plan / program
+设计	design / to design
+测试	test / to test
+需求	requirement / demand
+功能	function / feature
+数据	data
+系统	system
+软件	software
+硬件	hardware
+网络	network / internet
+代码	code
+用户	user
+信息	information
+文件	file / document
+图片	image / picture
+视频	video
+市场	market
+技术	technology
+团队	team
+客户	client / customer
+产品	product
+版本	version
+接口	API / interface
+服务器	server
+数据库	database
+算法	algorithm
+架构	architecture
+模块	module
+组件	component
+配置	configuration / to configure
+部署	deploy / deployment
+编译	compile
+调试	debug
+性能	performance
+优化	optimize / optimization
+错误	error / mistake
+异常	exception
+日志	log
+参数	parameter
+函数	function
+变量	variable
+对象	object
+属性	property / attribute
+接口	interface
+进程	process
+线程	thread
+
+# ---------- 常用动词/名词（修正释义顺序）----------
+提高	improve / increase / raise
+降低	reduce / lower
+增加	increase / add
+减少	reduce / decrease
+开始	start / begin
+结束	end / finish
+完成	complete / finish
+继续	continue
+改变	change
+支持	support
+反对	oppose
+同意	agree
+拒绝	refuse / reject
+接受	accept
+决定	decide / decision
+选择	choose / select / choice
+考虑	consider
+准备	prepare / get ready
+实现	realize / implement
+解决	solve / resolve
+处理	handle / deal with / process
+分析	analyze / analysis
+讨论	discuss / discussion
+交流	communicate / exchange
+合作	cooperate / cooperation
+竞争	compete / competition
+发展	develop / development
+建设	build / construct
+生产	produce / production
+销售	sell / sales
+购买	purchase / buy
+使用	use
+提供	provide / offer
+获得	obtain / get
+失去	lose
+发现	discover / find
+发明	invent
+创造	create
+保护	protect / protection
+帮助	help
+影响	influence / effect
+
+# ---------- 常用形容词/副词 ----------
+重要	important
+主要	main / major
+特殊	special
+一般	general / ordinary
+普通	common / ordinary
+简单	simple / easy
+复杂	complex / complicated
+容易	easy
+困难	difficult / hard
+可能	possible / maybe
+必须	must
+应该	should
+可以	can / may
+一直	always / continuously
+已经	already
+正在	in the process of
+马上	immediately
+最近	recently / lately
+以后	later / afterward
+以前	before / previously
+非常	very / extremely
+特别	especially / particularly
+真的	really
+当然	of course
+其实	actually / in fact
+
+# ---------- 社会生活高频词 ----------
+社会	society
+国家	country / nation
+政府	government
+法律	law
+政策	policy
+制度	system / institution
+组织	organization / to organize
+个人	individual / personal
+朋友	friend
+领导	leader / leadership
+专家	expert
+客户	client
+员工	employee / staff
+老板	boss
+经济	economy
+政治	politics
+文化	culture
+历史	history
+教育	education / to educate
+科学	science
+研究	research / study
+经验	experience
+知识	knowledge
+能力	ability / capability
+技能	skill
+兴趣	interest
+机会	opportunity / chance
+挑战	challenge
+风险	risk
+安全	safe / safety / security
+健康	health / healthy
+环境	environment
+资源	resource
+交通	traffic / transportation
+城市	city
+价值	value
+成本	cost
+价格	price
+收入	income
+支出	expense

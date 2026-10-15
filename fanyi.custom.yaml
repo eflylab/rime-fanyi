@@ -1,0 +1,50 @@
+# fanyi.custom.yaml —— 外语译词功能：可复用配置片段（模板）
+#
+# 【重要说明】
+# 本文件是「模板/来源」，由 install.sh 读取，
+# 并自动把下方 patch 内容合并进各输入方案的 .custom.yaml
+# （wubi86.custom.yaml、wubi_pinyin.custom.yaml），
+# 这样译词配置才会真正生效——因为 Rime 的 default.custom.yaml
+# 补丁只作用于 default.yaml，不会作用于各个输入方案。
+#
+# 若你需要手动安装，请把下方 patch 内容整体复制进
+# ~/Library/Rime/wubi86.custom.yaml 的 patch 下（注意同名键会覆盖）。
+
+patch:
+  # === 译词功能配置 ===
+  # 是否开启译词显示
+  fanyi/enabled: true
+
+  # 显示模式：
+  #   replace —— 覆盖，直接用译词替换原有注释（默认）
+  #              例：开发  develop / development
+  #   append  —— 追加，保留原有注释（如五笔码），译词接在其后
+  #              例：开发  gayt · develop / development
+  fanyi/mode: replace
+
+  # append 模式下，原有注释与译词之间的分隔符
+  fanyi/separator: " · "
+
+  # 词典 / 语言选择（切换语言后需重新部署）：
+  #   cn2en —— 中→英（完整 CC-CEDICT，11 万条）
+  #   cn2ja —— 中→日（精选高频，约 280 条）
+  fanyi/dictionary: cn2en
+
+  # 高频词覆盖表（优先于主词典，修正 CC-CEDICT 的释义顺序问题）
+  fanyi/overrides: cn_overrides
+
+  # === 译词上屏（可选）===
+  # 输入过程中高亮候选，按下方快捷键，把该候选的译词整串上屏并清空输入。
+  fanyi/commit_enabled: true
+  # 快捷键：修饰键用 + 连接，键名取 KeyEvent 键名。
+  #   例如 "Control+Return"、"Control+Shift+Return"、"Alt+Return"
+  fanyi/commit_key: "Control+Return"
+
+  # === 挂载到方案引擎 ===
+  # 注意：必须写 lua_filter@*fanyi（不能写 lua_filter@*fanyi.filter，
+  # librime 会把 ".filter" 当成子路径，导致组件解析异常、候选栏变空）。
+  engine/filters:
+    - lua_filter@*fanyi
+
+  # 处理器前插到最前面：@before 与数字之间有一个空格，整条路径要加引号。
+  "engine/processors/@before 0": lua_processor@*fanyi_commit

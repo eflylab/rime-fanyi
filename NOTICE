@@ -1,0 +1,25 @@
+# 第三方数据署名 / Third-Party Notices
+
+## CC-CEDICT（dict/cn2en.tsv）
+
+本项目的 `dict/cn2en.tsv` 由 **CC-CEDICT** 词典转换而来。
+
+- 来源：https://www.mdbg.net/chinese/dictionary?page=cedict
+- 许可：Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
+  https://creativecommons.org/licenses/by-sa/4.0/
+
+CC-CEDICT 的原始版权与引用说明：
+
+```
+CC-CEDICT
+Community maintained free Chinese-English dictionary.
+Published by MDBG
+Referenced works:
+  CEDICT - Copyright (C) 1997, 1998 Paul Andrew Denisowski
+```
+
+根据 CC BY-SA 4.0，若你分发本词典或其修改版本，需：
+1. 保留上述署名与来源；
+2. 以相同许可（CC BY-SA 4.0）分发衍生作品。
+
+本项目**代码**部分采用 MIT 许可（见 LICENSE）；词典数据部分适用其原始许可。
